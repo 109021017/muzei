@@ -33,6 +33,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.google.android.apps.muzei.util.ImageBlurrer;
 import com.google.android.apps.muzei.util.LogUtil;
 import com.google.android.apps.muzei.util.MathUtil;
 
@@ -119,7 +120,7 @@ public class MuzeiRendererFragment extends Fragment implements
                 // Blur
                 ImageBlurrer blurrer = new ImageBlurrer(getActivity());
                 Bitmap blurred = blurrer.blurBitmap(bitmap,
-                        ImageBlurrer.MAX_SUPPORTED_BLUR_PIXELS);
+                        ImageBlurrer.MAX_SUPPORTED_BLUR_PIXELS, 0);
 
                 // Dim
                 Canvas c = new Canvas(blurred);
